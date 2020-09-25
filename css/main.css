@@ -1,0 +1,351 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  background-color: #eeeeee;
+  align-items: center;
+  justify-items: center;
+  height: 100vh;
+  font-size: 62.5%; }
+  .container-social {
+    padding: 1rem;
+    display: flex;
+    height: auto;
+    width: 5rem;
+    position: relative;
+    justify-content: center; }
+    .container-social-icon {
+      font-size: 1.9rem;
+      padding: 1rem 1rem;
+      margin: 1rem -1.5rem;
+      color: cornflowerblue;
+      cursor: pointer;
+      border-radius: 50%;
+      transition: all .7s ease-in-out .3s; }
+      .container-social-icon .iconFont {
+        color: currentColor; }
+        .container-social-icon .iconFont:hover {
+          color: cornflowerblue;
+          z-index: 1000;
+          transition: all .4s ease-in-out .3s;
+          transform: translateY(1rem); }
+    .container-social-button {
+      position: absolute;
+      font-size: 1.3rem;
+      padding: 1.1rem 6rem;
+      background: cornflowerblue;
+      color: white;
+      border-radius: 2rem;
+      top: 10%;
+      cursor: pointer;
+      transition: all .7s ease-in-out .3s; }
+    .container-social:hover > .container-social-button {
+      opacity: 0;
+      z-index: -140px; }
+    .container-social-button:hover ~ .container-social-icon {
+      margin: 1rem .5rem;
+      color: darkorchid; }
+
+.checkOut {
+  grid-row: 1/-1;
+  grid-column: 1/-1;
+  justify-items: center;
+  justify-content: center;
+  color: #eeeeee; }
+  .checkOut #checkButton {
+    display: none; }
+  .checkOut__button {
+    position: relative;
+    display: flex;
+    justify-items: center;
+    flex-wrap: nowrap;
+    color: currentColor;
+    border: none;
+    text-decoration: none;
+    width: 7.7rem;
+    overflow: hidden;
+    font-size: 1.3rem;
+    font-family: montserrat;
+    background-color: #30364b;
+    padding: 1rem 5rem;
+    border-radius: 2.5rem;
+    cursor: pointer;
+    outline: none;
+    transition: transform .1s ease-in 0s;
+    z-index: 0; }
+    .checkOut__button-text {
+      display: flex;
+      white-space: nowrap;
+      transition: opacity 1s ease; }
+    .checkOut__button-after-text {
+      position: absolute;
+      top: 25%;
+      left: 20%;
+      transform: translate(-70% -70%);
+      visibility: hidden;
+      justify-self: center;
+      align-self: center; }
+      .checkOut__button-after-text .iconFont {
+        color: greenyellow; }
+    .checkOut__button-track {
+      transform: translateX(7rem);
+      min-width: 2.7rem;
+      flex-wrap: nowrap;
+      white-space: nowrap; }
+    .checkOut__button--box {
+      position: absolute;
+      width: 1.5rem;
+      height: 1.3rem;
+      top: 50%;
+      transform: translate(0, -50%);
+      left: -10%;
+      background: linear-gradient(to bottom, rgba(252, 235, 139, 0.836) 49%, rgba(27, 27, 27, 0.658) 50%, rgba(252, 238, 38, 0.815) 59%);
+      z-index: 60; }
+    .checkOut__button--truck {
+      height: 2rem;
+      width: auto;
+      display: flex;
+      position: absolute;
+      top: 50%;
+      z-index: 100;
+      transition: right 2s ease-in .3s;
+      transform: translate(0, -50%);
+      right: -40%; }
+      .checkOut__button--truck-back {
+        position: relative;
+        height: 2rem;
+        width: 3.5rem;
+        background: #eeeeee; }
+        .checkOut__button--truck-back::before {
+          position: absolute;
+          content: " ";
+          height: 2px;
+          width: 1.3rem;
+          transform-origin: right;
+          transform: translate(-1.2rem) rotate(-90deg);
+          background: #eeeeee; }
+        .checkOut__button--truck-back::after {
+          position: absolute;
+          content: " ";
+          height: 2px;
+          top: 1.9rem;
+          width: 1.3rem;
+          transform-origin: right;
+          transform: translate(-1.2rem) rotate(90deg);
+          background: #eeeeee; }
+      .checkOut__button--truck-connector {
+        position: relative;
+        transform: translateY(0.4rem);
+        height: 1.2rem;
+        width: .1rem;
+        background: rgba(3, 3, 160, 0.712); }
+      .checkOut__button--truck-front {
+        position: relative;
+        height: 1.8rem;
+        display: flex;
+        width: 1.6rem;
+        border-radius: 0 5px 5px 0;
+        transform: translateY(0.1rem);
+        background: blue; }
+        .checkOut__button--truck-front-shade {
+          width: .4rem;
+          height: 100%;
+          border-radius: 0 3px 3px 0;
+          background: #eeeeee60; }
+        .checkOut__button--truck-front-windscreen {
+          position: relative;
+          width: .5rem;
+          align-self: center;
+          height: 97%;
+          border-radius: 0 5px 5px 0;
+          background: #000000; }
+          .checkOut__button--truck-front-windscreen::before {
+            content: " ";
+            position: absolute;
+            width: 100%;
+            top: .4rem;
+            transform: rotate(30deg);
+            border-radius: 5px 0 5px 0;
+            height: .1rem;
+            background: linear-gradient(to right, rgba(255, 255, 255, 0.253), rgba(255, 255, 255, 0.253)); }
+          .checkOut__button--truck-front-windscreen::after {
+            content: " ";
+            position: absolute;
+            width: 100%;
+            top: .55rem;
+            transform: rotate(30deg);
+            border-radius: 5px 0 5px 0;
+            height: .1rem;
+            background: linear-gradient(to right, rgba(255, 255, 255, 0.253), rgba(255, 255, 255, 0.253)); }
+        .checkOut__button--truck-front-light-up {
+          position: absolute;
+          width: .1rem;
+          top: .2rem;
+          left: 1.5rem;
+          background: yellow;
+          border-radius: 2px 2px;
+          height: .4rem; }
+        .checkOut__button--truck-front-light-down {
+          position: absolute;
+          width: .1rem;
+          top: 1.2rem;
+          left: 1.5rem;
+          background: yellow;
+          border-radius: 2px 2px;
+          height: .4rem; }
+        .checkOut__button--truck-front::before {
+          content: " ";
+          position: absolute;
+          width: 2rem;
+          top: 0rem;
+          opacity: 0;
+          left: 1.6rem;
+          background: yellow;
+          border-radius: 2px 2px;
+          height: .9rem;
+          clip-path: polygon(0 38%, 100% 0, 100% 100%, 0 55%);
+          background: linear-gradient(to right, rgba(255, 255, 0, 0.486) 30%, rgba(160, 160, 3, 0.214), rgba(87, 87, 1, 0.282)); }
+        .checkOut__button--truck-front::after {
+          content: " ";
+          position: absolute;
+          width: 2rem;
+          top: 1rem;
+          opacity: 0;
+          left: 1.6rem;
+          background: yellow;
+          border-radius: 2px 2px;
+          height: .9rem;
+          clip-path: polygon(0 38%, 100% 0, 100% 100%, 0 55%);
+          background: linear-gradient(to right, rgba(255, 255, 0, 0.486) 30%, rgba(160, 160, 3, 0.214), rgba(87, 87, 1, 0.282)); }
+
+.checkOut__button:active {
+  animation: buttonClick .1s ease-in; }
+
+.checkOut__button:focus > .checkOut__button-text {
+  opacity: 0; }
+
+.checkOut__button:focus > .checkOut__button--box {
+  animation: boxMovement 3s linear .1s; }
+
+.checkOut__button:focus > .checkOut__button--truck {
+  animation: truckMovement 8s linear .1s; }
+
+.checkOut__button:focus > .checkOut__button--truck > .checkOut__button--truck-back::before {
+  animation: truckBackdoorUp 6.1s linear .1s; }
+
+.checkOut__button:focus > .checkOut__button--truck > .checkOut__button--truck-back::after {
+  animation: truckBackdoorDown 6.2s linear .1s; }
+
+.checkOut__button:focus > .checkOut__button-track {
+  animation: trackMovement 8s linear .1s; }
+
+.checkOut__button:focus > .checkOut__button--truck > .checkOut__button--truck-front::after,
+.checkOut__button:focus > .checkOut__button--truck > .checkOut__button--truck-front::before {
+  animation: lightsOut 7.5s linear .1s;
+  animation-fill-mode: forwards; }
+
+.checkOut__button:focus > .checkOut__button-after-text {
+  animation: afterText 9s linear .1s;
+  animation-fill-mode: forwards; }
+
+@keyframes buttonClick {
+  0% {
+    transform: scale(0.9); }
+  100% {
+    transform: scale(1); } }
+
+@keyframes boxMovement {
+  0% {
+    left: -10%; }
+  30% {
+    left: 4%; }
+  80% {
+    left: 4%; }
+  100% {
+    left: 25%; } }
+
+@keyframes truckMovement {
+  0% {
+    right: -40%; }
+  17% {
+    right: 44%; }
+  58% {
+    right: 44%; }
+  68% {
+    right: 20%; }
+  76% {
+    right: 16%; }
+  78% {
+    right: 13%; }
+  86% {
+    right: 55%; }
+  94% {
+    right: 58%; }
+  100% {
+    right: -33%; } }
+
+@keyframes truckBackdoorUp {
+  0% {
+    transform: translate(-1.2rem) rotate(-90deg); }
+  20% {
+    transform: translate(-1.2rem) rotate(-90deg); }
+  30% {
+    transform: translate(-1.2rem) rotate(17deg); }
+  45% {
+    transform: translate(-1.2rem) rotate(17deg); }
+  50% {
+    transform: translate(-1.2rem) rotate(17deg); }
+  70% {
+    transform: translate(-1.2rem) rotate(-90deg); }
+  80% {
+    transform: translate(-1.2rem) rotate(-90deg); }
+  100% {
+    transform: translate(-1.2rem) rotate(-90deg); } }
+
+@keyframes truckBackdoorDown {
+  0% {
+    transform: translate(-1.2rem) rotate(90deg); }
+  20% {
+    transform: translate(-1.2rem) rotate(90deg); }
+  25% {
+    transform: translate(-1.2rem) rotate(90deg); }
+  35% {
+    transform: translate(-1.2rem) rotate(-17deg); }
+  60% {
+    transform: translate(-1.2rem) rotate(-17deg); }
+  70% {
+    transform: translate(-1.2rem) rotate(90deg); }
+  80% {
+    transform: translate(-1.2rem) rotate(90deg); }
+  100% {
+    transform: translate(-1.2rem) rotate(90deg); } }
+
+@keyframes trackMovement {
+  0% {
+    transform: translateX(7rem); }
+  60% {
+    transform: translateX(7rem); }
+  80% {
+    transform: translateX(-7rem); }
+  97% {
+    transform: translateX(-27rem); } }
+
+@keyframes lightsOut {
+  60% {
+    opacity: 0; }
+  63% {
+    opacity: 1; }
+  100% {
+    opacity: 1; } }
+
+@keyframes afterText {
+  0% {
+    display: inline-block;
+    visibility: visible;
+    opacity: 0; }
+  90% {
+    display: inline-block;
+    opacity: 0; }
+  100% {
+    opacity: 1;
+    display: inline-block;
+    visibility: visible; } }
